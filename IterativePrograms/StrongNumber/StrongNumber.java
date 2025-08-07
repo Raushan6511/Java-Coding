@@ -1,3 +1,4 @@
+// Check if number is a strong number. = 145 => 1!+ 4!+ 5! = 145 
 package IterativePrograms.StrongNumber;
 
 import java.io.BufferedReader;
