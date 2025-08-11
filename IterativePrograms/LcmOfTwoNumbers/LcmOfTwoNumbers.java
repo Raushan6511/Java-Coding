@@ -15,13 +15,16 @@ public class LcmOfTwoNumbers {
         int lcm=(firstNumber*secondNumber)/(gcd(firstNumber,secondNumber));
         System.out.print("LCM of "+firstNumber+" & "+secondNumber+" = "+lcm);
     }
+
     public static int gcd(int first, int second){
-        while (second != 0) {
-            int temp = second;
-            second = first % second;
-            System.out.println("sec"+second);
-            first = temp;
+        int divident = first;
+        int divisor = second;
+        
+        while (divisor != 0) {
+            int remainder = divident % divisor;
+            divident = divisor;
+            divisor = remainder;
         }
-        return first;
+        return divident;
     }
 }
