@@ -9,12 +9,13 @@ public class DecimalToBinary {
         BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Please enter a number: ");
         int decimalNumber=Integer.parseInt(br.readLine());
+        int originalNumber=decimalNumber;
         StringBuilder binaryForm=new StringBuilder();
         while (decimalNumber>0) {
             int remainder=decimalNumber%2;
             decimalNumber=decimalNumber/2;
             binaryForm.append(remainder);
         }
-        System.out.println("Binary no of "+decimalNumber+" is: "+binaryForm.reverse().toString());
+        System.out.println("Binary no of "+originalNumber+" is: "+binaryForm.reverse().toString());
     }
 }
