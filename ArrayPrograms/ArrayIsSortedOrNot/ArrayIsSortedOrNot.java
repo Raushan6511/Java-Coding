@@ -1,21 +1,18 @@
 package ArrayPrograms.ArrayIsSortedOrNot;
 
 public class ArrayIsSortedOrNot {
+
     public static boolean isArrayIsSorted(int[] array){
-         int length=array.length;
-         boolean flag=false;
-         for(int i=0;i<length-1;i++){
-            if(array[i]<array[i+1]){
-                flag=true;
+        int arrayLength=array.length - 1;
+        for (int i = 0; i < arrayLength ; i++) {
+            if (array[i] > array[i + 1]) {
+                return false; 
             }
-            else{
-                flag=false;
-            }
-         }
-        return flag;
+        }
+        return true;
     }
     public static void main(String[] args) {
-        int[] arr={1,2,3,9,15};
+        int[] arr={1,2,3,9,18,100,200,2};
         if(isArrayIsSorted(arr)==true){
             System.out.print("Array is Sorted.");
         }
